@@ -33,6 +33,7 @@ int main(void)
     {
         if (get_next_report(fp, &r))
         {
+            fclose(fp);
             return 1;
         }
 
@@ -42,6 +43,9 @@ int main(void)
         }
     }
     printf("There are %d safe reports\n", safe_count);
+
+    fclose(fp);
+    return 0;
 }
 
 int get_next_report(FILE *fp, report *out_report)
