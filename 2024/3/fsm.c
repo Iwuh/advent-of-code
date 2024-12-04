@@ -34,7 +34,7 @@ static instruction find_instruction(FILE *fp)
             char buf[2];
             if (fread(buf, sizeof(char), 2, fp) != 2)
             {
-                return 1;
+                return END;
             }
             if (strncmp(buf, "ul", strlen("ul")) == 0)
             {
@@ -48,7 +48,7 @@ static instruction find_instruction(FILE *fp)
             char buf[6];
             if (fread(buf, sizeof(char), 6, fp) != 6)
             {
-                return 1;
+                return END;
             }
             if (strncmp(buf, "o()", strlen("o()")) == 0)
             {
