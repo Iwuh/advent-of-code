@@ -1,0 +1,11 @@
+Checks: >
+  bugprone-*,
+  hicpp-*
+  cppcoreguidelines-*
+  misc-*,
+  modernize-*,
+  performance-*,
+  portability-*,
+  readability-*,
+  -readability-identifier-length,
+  -bugprone-assignment-in-if-condition
